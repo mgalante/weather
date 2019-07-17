@@ -1,0 +1,22 @@
+<div class="current" *ngIf="data">
+    <h1 class="h2 mb-0">{{ data.location.region }}</h1>
+    <ul class="list-unstyled">
+        <li>{{ data.current.last_updated | date:'EEEE, HH:mm' }}</li>
+        <li>{{ data.current.condition.text }}</li>
+    </ul>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="d-flex">
+                <img [src]="data.current.condition.icon" />
+                <span class="current__temp">{{ data.current.temp_c }} </span>
+                <span>°C</span>
+            </div>
+        </div>
+        <ul class="col-sm-6 list-unstyled">
+            <li>Wind speed {{ data.current.wind_kph }} km/h</li>
+            <li>Humidity: {{ data.current.humidity }}%</li>
+            <li>Rain: {{data.current.precip_mm}}mm</li>
+            <!-- {{ data | json }} -->
+        </ul>
+    </div>
+</div>

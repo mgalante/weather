@@ -1,0 +1,12 @@
+<code>
+    {{ data | json }}
+</code>
+<ul class="d-flex justify-content-between list-unstyled">
+    <li *ngFor="let day of days" class="text-center" class="forecast-day">
+        <img [src]="day.day.condition.icon">
+        <div>
+            <span class="forecast-day__max-temp">{{ day.day.maxtemp_c }}°</span>
+            <span class="forecast-day__min-temp">{{ day.day.mintemp_c }}°</span>
+        </div>
+    </li>
+</ul>

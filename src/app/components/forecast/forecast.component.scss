@@ -1,0 +1,14 @@
+.forecast-day {
+    padding: 10px;
+
+    &__max-temp {
+        font-weight: bold;
+        padding: 2px;        
+    }
+    
+    &__min-temp {
+        font-weight: bold;
+        color: #ccc;
+        padding: 2px;        
+    }
+}
