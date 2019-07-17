@@ -1,1 +1,10 @@
-<p>search works!</p>
+<form class="example-form">
+  <mat-form-field class="w-100">
+    <input type="text" placeholder="The weather in" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="officeAutocomplete">
+    <mat-autocomplete #officeAutocomplete="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngFor="let office of filteredOffices$ | async" [value]="office">
+        {{office.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

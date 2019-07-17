@@ -1,7 +1,4 @@
-<code>
-    {{ data | json }}
-</code>
-<ul class="d-flex justify-content-between list-unstyled">
+<ul class="d-flex justify-content-lg-between list-unstyled flex-wrap">
     <li *ngFor="let day of days" class="text-center" class="forecast-day">
         <img [src]="day.day.condition.icon">
         <div>

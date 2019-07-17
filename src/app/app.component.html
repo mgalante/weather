@@ -2,7 +2,7 @@
   {{current | json}}
 </code> -->
 <div class="container">
-  <app-search [offices]="offices$|async"></app-search>
+  <app-search [offices]="offices$|async" (selectedOffice)="onSelectOffice($event)"></app-search>
   <app-current [data]="current$|async"></app-current>
   <app-forecast [days]="days$|async"></app-forecast>
 </div>
